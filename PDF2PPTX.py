@@ -1,6 +1,6 @@
-import aspose.slides as slides
+import PySimpleGUI as sg
+import os
 
-with slides.Presentation() as pres:
-    pres.slides.remove_at(0)
-    pres.slides.add_from_pdf("test2.pdf")
-    pres.save("test2.pptx", slides.export.SaveFormat.PPTX)
+INPUT = sg.popup_get_file("Select xlsx file",  title="File selector")
+os.system(f"pdf2pptx {INPUT}")
+
