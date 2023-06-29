@@ -5,10 +5,7 @@
 * Simple Tk GUI
 
 ```cmd
-CMD_PDF2PPTX.bat
-CMD_PPTX2PDF.bat
-CMD_PDF2PNG.bat
-CMD_PNG2PDF.bat
+ConvertDocs.bat
 ```
 
 

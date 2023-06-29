@@ -24,12 +24,12 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.8102132"
-     inkscape:cx="345.26319"
-     inkscape:cy="118.21812"
-     inkscape:window-width="1758"
+     inkscape:zoom="2.5600281"
+     inkscape:cx="166.40443"
+     inkscape:cy="212.88829"
+     inkscape:window-width="571"
      inkscape:window-height="988"
-     inkscape:window-x="73"
+     inkscape:window-x="2586"
      inkscape:window-y="100"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
@@ -79,6 +79,42 @@
        d="m 35.104792,28.273738 h 10 v 1 h 2.5 l -7.5,2 -7.5,-2 h 2.5 z"
        id="path7689"
        sodipodi:nodetypes="cccccccc" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.0499999;stroke-linecap:round;stroke-linejoin:round"
+       id="rect4179-4"
+       width="20"
+       height="20"
+       x="30"
+       y="50"
+       rx="2"
+       ry="2"
+       inkscape:export-filename="ConvertDoc.png"
+       inkscape:export-xdpi="63.5"
+       inkscape:export-ydpi="63.5" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.95844px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#b70000;fill-opacity:1;stroke:none;stroke-width:0.238754"
+       x="33.864838"
+       y="53.606461"
+       id="text7437-3"
+       transform="scale(0.90237551,1.1081861)"><tspan
+         sodipodi:role="line"
+         id="tspan7435-28"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.95844px;font-family:'Noto Sans KR Black';-inkscape-font-specification:'Noto Sans KR Black, ';fill:#b70000;fill-opacity:1;stroke-width:0.238754"
+         x="33.864838"
+         y="53.606461">Conv</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.91747px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#008000;fill-opacity:1;stroke:none;stroke-width:0.267523"
+       x="30.477345"
+       y="67.983185"
+       id="text7437-9-2"
+       transform="scale(1.011115,0.98900715)"><tspan
+         sodipodi:role="line"
+         id="tspan7435-7-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.91747px;font-family:'Noto Sans KR Black';-inkscape-font-specification:'Noto Sans KR Black, ';fill:#008000;fill-opacity:1;stroke-width:0.267523"
+         x="30.477345"
+         y="67.983185">Doc</tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.0499999;stroke-linecap:round;stroke-linejoin:round"
        id="rect4179-9"
