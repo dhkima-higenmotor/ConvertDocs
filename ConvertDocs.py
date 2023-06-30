@@ -38,6 +38,7 @@ while True:
     if event == 'PPTX_PDF':
         subprocess.call([r'D:\github\ConvertDocs\CMD_PPTX2PDF.bat'])
     if event == 'PdfArranger':
-        subprocess.check_output(r'cd /d C:\Users\dhkima\scoop\apps\pdfarranger\current & pdfarranger.exe', shell=True)
+        #subprocess.check_output(r'cd /d C:\Users\dhkima\scoop\apps\pdfarranger\current & pdfarranger.exe', shell=True)
+        subprocess.check_output(r'cd /d %userprofile%\scoop\apps\pdfarranger\current & pdfarranger.exe', shell=True)
 
 window.close()
