@@ -1,7 +1,9 @@
 @echo off
 
 REM path
-call %userprofile%\scoop\apps\miniconda3\current\Scripts\activate.bat
+set root=%USERPROFILE%\miniforge3
+call %root%\Scripts\activate.bat %root%
+call conda activate base
 
 REM execute
 python CMD_PDF2PPTX.py

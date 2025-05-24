@@ -12,9 +12,8 @@ ConvertDocs.bat
 ## Prepare
 
 ```bash
-pip install pdf2pptx
-scoop install libreoffice
-pip install PyMuPDF
 conda install img2pdf
+pip install pdf2pptx PyMuPDF
+scoop install libreoffice
 ```
 
