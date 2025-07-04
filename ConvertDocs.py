@@ -1,44 +1,50 @@
-import PySimpleGUI as sg
+import tkinter as tk
 import subprocess
 
-# Theme
-sg.theme('DarkBlue3')
-sg.set_options(font=["D2Coding", 12])
+def run_pdf_to_png():
+    subprocess.call([r'D:\github\ConvertDocs\CMD_PDF2PNG.bat'])
 
-# GUI Layout
-layout = [
-    [
-        sg.Button("PDF_PNG"),
-        sg.Button("PDF_PPTX")
-    ],
-    [
-        sg.Button("PNG_PDF"),
-        sg.Button("PPTX_PDF")
-    ],
-    [
-        sg.Button("PdfArranger")
-    ],
-    [
-        sg.Button('Exit')
-    ]
-]
+def run_pdf_to_pptx():
+    subprocess.call([r'D:\github\ConvertDocs\CMD_PDF2PPTX.bat'])
 
-window = sg.Window('ConvertDoc', layout)
+def run_png_to_pdf():
+    subprocess.call([r'D:\github\ConvertDocs\CMD_PNG2PDF.bat'])
 
-while True:
-    event, values = window.read() 
-    if event==sg.WIN_CLOSED or event=='Exit':
-        break
-    if event == 'PDF_PNG':
-        subprocess.call([r'D:\github\ConvertDocs\CMD_PDF2PNG.bat'])
-    if event == 'PDF_PPTX':
-        subprocess.call([r'D:\github\ConvertDocs\CMD_PDF2PPTX.bat'])
-    if event == 'PNG_PDF':
-        subprocess.call([r'D:\github\ConvertDocs\CMD_PNG2PDF.bat'])
-    if event == 'PPTX_PDF':
-        subprocess.call([r'D:\github\ConvertDocs\CMD_PPTX2PDF.bat'])
-    if event == 'PdfArranger':
-        #subprocess.check_output(r'cd /d C:\Users\dhkima\scoop\apps\pdfarranger\current & pdfarranger.exe', shell=True)
-        subprocess.check_output(r'cd /d %userprofile%\scoop\apps\pdfarranger\current & pdfarranger.exe', shell=True)
+def run_pptx_to_pdf():
+    subprocess.call([r'D:\github\ConvertDocs\CMD_PPTX2PDF.bat'])
 
-window.close()
+def run_pdf_arranger():
+    subprocess.check_output(r'cd /d %userprofile%\scoop\apps\pdfarranger\current & pdfarranger.exe', shell=True)
+
+# Create the main window
+root = tk.Tk()
+root.title("ConvertDoc")
+
+# Set font
+font_style = ("D2Coding", 12)
+
+# Create and place buttons
+btn_pdf_png = tk.Button(root, text="PDF_PNG", font=font_style, command=run_pdf_to_png)
+btn_pdf_png.grid(row=0, column=0, padx=5, pady=5, sticky="ew")
+
+btn_pdf_pptx = tk.Button(root, text="PDF_PPTX", font=font_style, command=run_pdf_to_pptx)
+btn_pdf_pptx.grid(row=0, column=1, padx=5, pady=5, sticky="ew")
+
+btn_png_pdf = tk.Button(root, text="PNG_PDF", font=font_style, command=run_png_to_pdf)
+btn_png_pdf.grid(row=1, column=0, padx=5, pady=5, sticky="ew")
+
+btn_pptx_pdf = tk.Button(root, text="PPTX_PDF", font=font_style, command=run_pptx_to_pdf)
+btn_pptx_pdf.grid(row=1, column=1, padx=5, pady=5, sticky="ew")
+
+btn_pdf_arranger = tk.Button(root, text="PdfArranger", font=font_style, command=run_pdf_arranger)
+btn_pdf_arranger.grid(row=2, column=0, columnspan=2, padx=5, pady=5, sticky="ew")
+
+btn_exit = tk.Button(root, text="Exit", font=font_style, command=root.quit)
+btn_exit.grid(row=3, column=0, columnspan=2, padx=5, pady=5, sticky="ew")
+
+# Configure grid to expand buttons
+root.grid_columnconfigure(0, weight=1)
+root.grid_columnconfigure(1, weight=1)
+
+# Start the GUI event loop
+root.mainloop()
