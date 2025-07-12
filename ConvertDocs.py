@@ -18,6 +18,9 @@ def run_pptx_to_pdf():
 def run_png_to_pptx():
     subprocess.run([sys.executable,'CMD_PNG2PPTX.py'],capture_output=True,text=True,check=True)
 
+def run_pptx_to_png():
+    subprocess.run([sys.executable,'CMD_PPTX2PNG.py'],capture_output=True,text=True,check=True)
+
 def run_pdf_arranger():
     dfarranger_path = shutil.which('pdfarranger')
     subprocess.run(dfarranger_path,capture_output=True,text=True,check=True)
@@ -45,11 +48,14 @@ btn_pptx_pdf.grid(row=1, column=1, padx=5, pady=5, sticky="ew")
 btn_png_pptx = tk.Button(root, text="PNG_PPTX", font=font_style, command=run_png_to_pptx)
 btn_png_pptx.grid(row=2, column=0, padx=5, pady=5, sticky="ew")
 
+btn_pptx_png = tk.Button(root, text="PPTX_PNG", font=font_style, command=run_pptx_to_png)
+btn_pptx_png.grid(row=2, column=1, padx=5, pady=5, sticky="ew")
+
 btn_pdf_arranger = tk.Button(root, text="PdfArranger", font=font_style, command=run_pdf_arranger)
-btn_pdf_arranger.grid(row=2, column=1, padx=5, pady=5, sticky="ew")
+btn_pdf_arranger.grid(row=3, column=0, padx=5, pady=5, sticky="ew")
 
 btn_exit = tk.Button(root, text="Exit", font=font_style, command=root.quit)
-btn_exit.grid(row=3, column=0, columnspan=2, padx=5, pady=5, sticky="ew")
+btn_exit.grid(row=4, column=0, columnspan=2, padx=5, pady=5, sticky="ew")
 
 # Configure grid to expand buttons
 root.grid_columnconfigure(0, weight=1)
