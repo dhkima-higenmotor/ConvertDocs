@@ -11,6 +11,7 @@ def find_libreoffice_path():
     if sys.platform == "win32":
         program_files = os.environ.get("ProgramFiles", "C:\\Program Files")
         program_files_x86 = os.environ.get("ProgramFiles(x86)", "C:\\Program Files (x86)")
+        userprofile = os.environ.get("userprofile")
         
         windows_paths = [
             Path(program_files) / "LibreOffice" / "program" / "soffice.exe",
@@ -19,6 +20,7 @@ def find_libreoffice_path():
             Path(program_files_x86) / "LibreOffice 7" / "program" / "soffice.exe",
             Path(program_files) / "LibreOffice 6" / "program" / "soffice.exe", # Specific version
             Path(program_files_x86) / "LibreOffice 6" / "program" / "soffice.exe",
+            Path(userprofile) / "scoop" / "apps" / "libreoffice" / "current" / "LibreOffice" / "program" / "soffice.exe",
         ]
         for path in windows_paths:
             if path.is_file():
